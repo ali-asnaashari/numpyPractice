@@ -42,7 +42,6 @@ print(f'dtype = {np_arr_2.dtype}')
 print(np.random.randint(10, 50, 5))
 print(np.random.randint(10, 50, size=(2, 3)))
 
-
 ''' Slicing & indexes '''
 print(np_m_arr_1)
 # get
@@ -73,3 +72,28 @@ print(evenValue)
 print(np_m_arr_1[(np_m_arr_1 > 5) & (np_m_arr_1 == 10)])
 # get unique value
 print(np.unique(np_m_arr_1))
+
+''' Reshaping Arrays '''
+print(np_m_arr_1)
+print(np_m_arr_1.reshape((1, 9)))
+print(np.resize(np_m_arr_1, (2, 5)))
+# transpose
+print(np_m_arr_1)
+print(np_m_arr_1.transpose())
+# swapaxes
+print(np_m_arr_1)
+print(np_m_arr_1.swapaxes(0, 1))
+# Flatten
+print(np_m_arr_1)
+print(np_m_arr_1.flatten())
+# Flatten Column order
+print(np_m_arr_1)
+print(np_m_arr_1.flatten('F'))
+# sort
+print(np_m_arr_1)
+# Column
+np_m_arr_1.sort(axis=0)
+print(np_m_arr_1)
+# Row
+np_m_arr_1.sort(axis=1)
+print(np_m_arr_1)
