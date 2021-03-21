@@ -41,3 +41,35 @@ print(f'dtype = {np_arr_2.dtype}')
 # Generate Random array
 print(np.random.randint(10, 50, 5))
 print(np.random.randint(10, 50, size=(2, 3)))
+
+
+''' Slicing & indexes '''
+print(np_m_arr_1)
+# get
+print(np_m_arr_1[0, 0])
+print(np_m_arr_1.item(0, 2))
+# set
+np_m_arr_1.itemset((0, 1), 1)
+print(np_m_arr_1)
+# Shape
+print(np_m_arr_1.shape)
+# take ---> get specific value by index
+print(np.take(np_m_arr_1, [0, 3, 6]))
+# put ---> replace provided index values with new values
+np.put(np_m_arr_1, [0, 3, 6], [10, 9, 8])
+print(np_m_arr_1)
+# slicing One-Dimensional array
+print(np_arr_1)
+print(np_arr_1[:5:2])
+# slicing Two-Dimensional array ---> Get Second Value Each row
+print(np_m_arr_1)
+print(np_m_arr_1[:, 1])
+# flip
+print(np_m_arr_1[::-1])
+# get even value
+evenValue = np_m_arr_1[np_m_arr_1 % 2 == 0]
+print(evenValue)
+# get value grater than 5 and equal to 10
+print(np_m_arr_1[(np_m_arr_1 > 5) & (np_m_arr_1 == 10)])
+# get unique value
+print(np.unique(np_m_arr_1))
